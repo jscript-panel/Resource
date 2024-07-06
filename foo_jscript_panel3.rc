@@ -1,0 +1,146 @@
+#include "Core\Resource.hpp"
+#include <winres.h>
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_CONFIGURE DIALOGEX 0, 0, 620, 400
+STYLE DS_SETFONT | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Configuration"
+FONT 8, "Segoe UI", 400, 0, 0x0
+BEGIN
+    CONTROL       "",         IDC_SCINTILLA, "Scintilla.jsp3", WS_CLIPCHILDREN, 0, 0, 620, 374
+    PUSHBUTTON    "&Tools",   IDC_BTN_TOOLS,   7, 380, 50, 14
+    PUSHBUTTON    "St&yle",   IDC_BTN_STYLE,   64, 380, 50, 14
+    PUSHBUTTON    "&Samples", IDC_BTN_SAMPLES, 121, 380, 50, 14
+    DEFPUSHBUTTON "&OK",      IDOK,            455, 380, 50, 14
+    PUSHBUTTON    "&Apply",   IDC_BTN_APPLY,   509, 380, 50, 14
+    PUSHBUTTON    "&Cancel",  IDCANCEL,        563, 380, 50, 14
+END
+
+IDD_DIALOG_PROPERTIES DIALOGEX 0, 0, 620, 400
+STYLE DS_SETFONT | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Properties"
+FONT 8, "Segoe UI", 400, 0, 0x0
+BEGIN
+    CONTROL       "",        IDC_LIST_PROPERTIES, "SysListView32", LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP, 0, 0, 620, 374
+    PUSHBUTTON    "&Import", IDC_BTN_IMPORT, 7, 380, 50, 14
+    PUSHBUTTON    "&Export", IDC_BTN_EXPORT, 64, 380, 50, 14
+    PUSHBUTTON    "C&lear",  IDC_BTN_CLEAR,  121, 380, 50, 14
+    DEFPUSHBUTTON "&OK",     IDOK,           455, 380, 50, 14
+    PUSHBUTTON    "&Apply",  IDC_BTN_APPLY,  509, 380, 50, 14
+    PUSHBUTTON    "&Cancel", IDCANCEL,       563, 380, 50, 14
+END
+
+IDD_DIALOG_STYLE DIALOGEX 0, 0, 330, 200
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Editor Properties"
+FONT 8, "Segoe UI", 400, 0, 0x0
+BEGIN
+    CONTROL         "", IDC_LIST_STYLE, "SysListView32", LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP, 0, 0, 330, 256
+    PUSHBUTTON      "&Import",  IDC_BTN_IMPORT,  7, 180, 50, 14
+    PUSHBUTTON      "&Export",  IDC_BTN_EXPORT,  64, 180, 50, 14
+    PUSHBUTTON      "&Presets", IDC_BTN_PRESETS, 121, 180, 50, 14
+    PUSHBUTTON      "&Close",   IDCANCEL,        273, 180, 50, 14
+END
+
+IDD_DIALOG_FIND_REPLACE DIALOGEX 0, 0, 239, 122
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Replace"
+FONT 8, "Segoe UI", 400, 0, 0x0
+BEGIN
+    LTEXT         "Find:",              IDC_STATIC,          7, 7, 35, 8
+    LTEXT         "Replace with:",      IDC_LABEL_REPLACE,   7, 35, 44, 8
+
+    EDITTEXT                            IDC_EDIT_FIND,       7, 17, 168, 14, ES_AUTOHSCROLL
+    EDITTEXT                            IDC_EDIT_REPLACE,    7, 45, 168, 14, ES_AUTOHSCROLL
+    AUTOCHECKBOX  "Match case",         IDC_CHECK_MATCHCASE, 7, 64, 80, 10
+    AUTOCHECKBOX  "Whole word",         IDC_CHECK_WHOLEWORD, 7, 78, 80, 10
+    AUTOCHECKBOX  "Regular Expression", IDC_CHECK_REGEXP,    7, 92, 80, 10
+    DEFPUSHBUTTON "Find Down",          IDC_BTN_NEXT,        182, 7, 50, 14,  WS_DISABLED
+    PUSHBUTTON    "Find Up",            IDC_BTN_PREVIOUS,    182, 25, 50, 14, WS_DISABLED
+    PUSHBUTTON    "Replace",            IDC_BTN_REPLACE,     182, 43, 50, 14, WS_DISABLED
+    PUSHBUTTON    "Replace All",        IDC_BTN_REPLACE_ALL, 182, 61, 50, 14, WS_DISABLED
+    PUSHBUTTON    "Close",              IDCANCEL,            182, 97, 50, 14
+END
+
+IDD_DIALOG_GOTO DIALOGEX 0, 0, 206, 59
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Go To Line"
+FONT 8, "Segoe UI", 400, 0, 0x0
+BEGIN
+    LTEXT         "Line number:", IDC_STATIC,           7, 7, 42, 8
+    EDITTEXT                      IDC_EDIT_LINE_NUMBER, 7, 17, 192, 14, ES_NUMBER | ES_AUTOHSCROLL
+    DEFPUSHBUTTON "&OK",          IDOK,                 95, 38, 50, 14
+    PUSHBUTTON    "&Cancel",      IDCANCEL,             149, 38, 50, 14
+END
+
+IDD_DIALOG_INPUTBOX DIALOGEX 0, 0, 240, 80
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "InputBox"
+FONT 8, "Segoe UI", 400, 0, 0x0
+BEGIN
+    LTEXT         "Prompt",  IDC_LABEL_PROMPT, 7, 7, 169, 56
+    EDITTEXT                 IDC_EDIT_VALUE,   7, 61, 226, 14, ES_AUTOHSCROLL
+    DEFPUSHBUTTON "&OK",     IDOK,             183, 7, 50, 14
+    PUSHBUTTON    "&Cancel", IDCANCEL,         183, 26, 50, 14
+END
+
+IDD_DIALOG_TEXTBOX DIALOGEX 0, 0, 620, 350
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "TextBox"
+FONT 8, "Segoe UI", 400, 0, 0x0
+BEGIN
+    LTEXT         "Prompt",  IDC_LABEL_PROMPT,                                    7, 7, 606, 56
+    CONTROL       "",        IDC_SCINTILLA,    "Scintilla.jsp3", WS_CLIPCHILDREN, 7, 28, 606, 296
+    DEFPUSHBUTTON "&OK",     IDOK,                                                509, 330, 50, 14
+    PUSHBUTTON    "&Cancel", IDCANCEL,                                            563, 330, 50, 14
+END
+
+IDD_DIALOG_PLAYLIST_LOCK DIALOGEX 0, 0, 170, 120
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "JScript Panel 3 Playlist Lock"
+FONT 8, "Segoe UI", 400, 0, 0x0
+BEGIN
+    AUTOCHECKBOX    "Disable adding items",           IDC_CHECK_FILTER_ADD,             4, 4, 150, 10
+    AUTOCHECKBOX    "Disable removing items",         IDC_CHECK_FILTER_REMOVE,          4, 20, 150, 10
+    AUTOCHECKBOX    "Disable reordering items",       IDC_CHECK_FILTER_REORDER,         4, 36, 150, 10
+    AUTOCHECKBOX    "Disable replacing items",        IDC_CHECK_FILTER_REPLACE,         4, 52, 150, 10
+    AUTOCHECKBOX    "Disable renaming this playlist", IDC_CHECK_FILTER_RENAME,          4, 68, 150, 10
+    AUTOCHECKBOX    "Disable removing this playlist", IDC_CHECK_FILTER_REMOVE_PLAYLIST, 4, 84, 150, 10
+
+    DEFPUSHBUTTON   "&OK",     IDOK,     62, 100, 50, 14
+    PUSHBUTTON      "&Cancel", IDCANCEL, 116, 100, 50, 14
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXT
+//
+
+IDR_CFG_BRIGHT     TEXT "cfgBright.cfg"
+IDR_CFG_DARK_GRAY  TEXT "cfgDarkGray.cfg"
+IDR_CFG_DEFAULT    TEXT "cfgDefault.cfg"
+IDR_CFG_RUBY_BLUE  TEXT "cfgRubyBlue.cfg"
+IDR_FB2K_API       TEXT "fb2k.api"
+IDR_JS_API         TEXT "js.api"
+IDR_PANEL_JS       TEXT "panel.js"
+IDR_TOOLBAR_JS     TEXT "toolbar.js"
+IDR_COUNTRIES_JSON TEXT "countries.json"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TYPELIB
+//
+
+IDR_TYPELIB TYPELIB "foo_jscript_panel3.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
