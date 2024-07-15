@@ -226,6 +226,7 @@ gr.FillEllipse(centreX, centreY, radiusX, radiusY, colour)
 gr.FillRectangle(x, y, w, h, colour)
 gr.FillRoundedRectangle(x, y, w, h, radiusX, radiusY, colour)
 gr.WriteText(text, font, colour, x, y, w, h[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])
+gr.WriteText2(text, font, colour, x, y, w, h[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])
 gr.WriteTextLayout(layout, colour, x, y, w, h[, vertical_offset])
 
 on_always_on_top_changed(state)
