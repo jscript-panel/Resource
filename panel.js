@@ -106,7 +106,7 @@ function on_mouse_move() {
 
 function on_paint(gr) {
 	gr.Clear(colours.background);
-	gr.WriteText(g_text, g_font, g_hot ? colours.highlight : colours.text, 0, 0, ww, wh, DWRITE_TEXT_ALIGNMENT_CENTER, DWRITE_PARAGRAPH_ALIGNMENT_CENTER);
+	gr.WriteTextSimple(g_text, g_font, g_hot ? colours.highlight : colours.text, 0, 0, ww, wh, DWRITE_TEXT_ALIGNMENT_CENTER, DWRITE_PARAGRAPH_ALIGNMENT_CENTER);
 }
 
 function on_size() {

@@ -229,6 +229,7 @@ gr.FillRoundedRectangle(x, y, w, h, radiusX, radiusY, colour)
 gr.WriteText(text, font, colour, x, y, w, h[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])
 gr.WriteText2(text, font, colour, x, y, w, h[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])
 gr.WriteTextLayout(layout, colour, x, y, w, h[, vertical_offset])
+gr.WriteTextSimple(text, font, colour, x, y, w, h[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])
 
 on_always_on_top_changed(state)
 on_char(code)
