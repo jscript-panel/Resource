@@ -128,6 +128,7 @@ utils.Version
 utils.VersionString
 
 utils.CalcTextWidth(text, font_name, font_size_px[, font_weight, font_style, font_stretch])
+utils.CalcTextWidth2(text, font_str)
 utils.CheckFont(name)
 utils.ColourPicker(default_colour[, error_on_cancel])
 utils.ConvertToAscii(str)
