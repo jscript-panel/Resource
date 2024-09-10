@@ -141,7 +141,7 @@ utils.CreateTextLayout(text, font_name, font_size_px[, font_weight, font_style, 
 utils.CreateTextLayout2(text, fonts[, text_alignment, paragraph_alignment, word_wrapping, trimming_granularity])
 utils.DateStringToTimestamp(str)
 utils.DetectCharset(path)
-utils.DownloadFileAsync(window_id, url, path)
+utils.DownloadFileAsync(window_id, url, path, verify_image)
 utils.DownloadImageAsync(window_id, url)
 utils.FormatDuration(seconds)
 utils.FormatFileSize(bytes)
