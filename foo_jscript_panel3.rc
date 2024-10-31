@@ -134,6 +134,7 @@ IDR_FB2K_API       TEXT "fb2k.api"
 IDR_JS_API         TEXT "js.api"
 IDR_PANEL_JS       TEXT "panel.js"
 IDR_TOOLBAR_JS     TEXT "toolbar.js"
+IDR_LODASH_JS      TEXT "lodash.min.js"
 IDR_COUNTRIES_JSON TEXT "countries.json"
 
 /////////////////////////////////////////////////////////////////////////////
